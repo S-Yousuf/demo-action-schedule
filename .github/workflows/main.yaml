@@ -4,7 +4,7 @@ on:
     branches:
       - master
   schedule:
-    - cron: '12 13 * * *'
+    - cron: '14 13 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,4 +21,4 @@ jobs:
           date > last-run.txt
           git add .
           git commit -m "Daily commit"
-          git push
+          git push origin HEAD:master
