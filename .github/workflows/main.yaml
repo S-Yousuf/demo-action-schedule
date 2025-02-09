@@ -4,15 +4,19 @@ on:
     branches:
       - master
   schedule:
-    - cron: '23 13 * * *'
+    - cron: '29 13 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+      with:
+          persist-credentials: false  # Prevents auth issues
+          fetch-depth: 0  # Ensures we have full repo access
+
     - name: Running
       run: | 
-        git config user.name "S-Yousuf"       
+        git config user.name "GitHub Actions"       
         git config user.email "21f3000766@ds.study.iitm.ac.in"      
         
 
