@@ -4,17 +4,16 @@ on:
     branches:
       - master
   schedule:
-    - cron: '14 13 * * *'
+    - cron: '20 13 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - name: Running
-      run: |
-        git config --global user.name "S-Yousuf" 
+      run: |        
         git config --global user.email "21f3000766@ds.study.iitm.ac.in"      
-        echo "Running!"
+        
 
     - name: Make Daily Commit
       run: |
