@@ -18,7 +18,7 @@ jobs:
 
     - name: Make Daily Commit
       run: |
-          echo "New Commit"
+          date > last-run.txt
           git add .
           git commit -m "Daily commit"
           git push    
