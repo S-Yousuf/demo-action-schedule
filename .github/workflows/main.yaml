@@ -21,4 +21,4 @@ jobs:
           date > last-run.txt
           git add .
           git commit -m "Daily commit"
-          git push    
+          git push origin main  
