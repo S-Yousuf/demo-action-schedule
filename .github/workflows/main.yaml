@@ -4,7 +4,7 @@ on:
     branches:
       - master
   schedule:
-    - cron: '0 13 * * *'
+    - cron: '9 13 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Running
       run: |
-        git config --global user.name "GitHub Actions Bot" 
+        git config --global user.name "S-Yousuf" 
         git config --global user.email "21f3000766@ds.study.iitm.ac.in"      
         echo "Running!"
 
